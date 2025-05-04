@@ -4,7 +4,6 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Connect to SQLite
 const db = new sqlite3.Database('./todos.db', (err) => {
   if (err) {
     console.error('Failed to connect to SQLite:', err.message);
@@ -22,11 +21,9 @@ const db = new sqlite3.Database('./todos.db', (err) => {
   }
 });
 
-// Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
