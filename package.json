@@ -5,14 +5,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-  }, "engines" : {
+  },
+  "engines": {
     "node": ">=16"
-},
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "better-sqlite3": "^11.9.1",
     "express": "^5.1.0",
     "sqlite3": "^5.1.7"
   }
